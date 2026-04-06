@@ -1,5 +1,5 @@
 {
-  "buildCommand": "ng build --configuration production",
+  "buildCommand": "npx build --configuration production",
   "outputDirectory": "dist/cronometro-angular/browser",
   "installCommand": "npm install",
   "framework": null,
