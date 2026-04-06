@@ -1,0 +1,43 @@
+
+<div class="contenedor">
+  <h1 class="titulo">
+    Mi Cronómetro con Observadores
+  </h1>
+
+  <div class="display">
+    <span class="numero">{{ segundos }}</span>
+    <span class="unidad">s</span>
+  </div>
+
+  <div class="controles">
+    <button
+      class="btn btn-iniciar"
+      (click)="iniciar()"
+      [disabled]="corriendo"
+    >
+      Iniciar
+    </button>
+
+    <button
+      class="btn btn-pausar"
+      (click)="pausar()"
+      [disabled]="!corriendo"
+    >
+      Pausar
+    </button>
+
+    <button
+      class="btn btn-reiniciar"
+      (click)="reiniciar()"
+    >
+      Reiniciar
+    </button>
+  </div>
+
+  <p class="info">
+    Estado:
+    <strong [class.activo]="corriendo" [class.pausado]="!corriendo">
+      {{ corriendo ? 'Corriendo' : 'Detenido' }}
+    </strong>
+  </p>
+</div>
